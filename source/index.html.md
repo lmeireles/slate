@@ -10,12 +10,13 @@ toc_footers:
   - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
 
 includes:
+  - session_data
   - auth
   - errors
 
 search: true
 ---
 
-# Introdução
+# Introduction
 
-Documentação dos endpoints utilizados pelo aplicativo GoRead.
+This doc will show and explain the main features of the GoRead API

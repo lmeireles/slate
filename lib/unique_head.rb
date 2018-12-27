@@ -5,6 +5,16 @@ class UniqueHeadCounter < Middleman::Renderers::MiddlemanRedcarpetHTML
   def initialize
     super
     @head_count = {}
+
+    # Global values
+    @domain = "https://content-delivery.goread.com.br"
+    @session_params = "
+      app_id      = @deviceService.getAppIdentifier(),
+      device_id   = @deviceService.getDeviceId(),
+      device_name = @deviceService.getDeviceName(),
+      device_type = @deviceService.getPlatform().toLowerCase(),
+      os_version  = @deviceService.getOS()
+    "
   end
   def header(text, header_level)
     friendly_text = text.gsub(/<[^>]*>/,"").parameterize
